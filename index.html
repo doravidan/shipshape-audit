@@ -61,6 +61,9 @@ section{padding:80px 0}
 .tier ul{padding-left:20px;margin:0 0 20px}
 .tier li{margin:5px 0}
 .tier .btn{margin-top:auto;text-align:center}
+.tier .pay{display:block;text-align:center;margin-top:10px;padding:10px 16px;min-height:44px;border:1.5px solid var(--line);border-radius:6px;background:#fff;color:var(--accent-ink);font-weight:600;font-size:15px;text-decoration:none}
+.tier .pay:hover{border-color:var(--accent)}
+.tier .pay-note{font-size:14px;color:var(--muted);margin:8px 0 0;text-align:center}
 .steps{counter-reset:s;list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:32px}
 .steps li{counter-increment:s;border-top:2px solid var(--ink);padding-top:14px}
 .steps li::before{content:counter(s);font-family:"JBMono",monospace;font-size:14px;color:var(--muted);display:block;margin-bottom:6px}
@@ -138,10 +141,14 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
 <a class="btn ghost" href="#audit">Request audit</a></div>
 <div class="tier main"><h3>Quick fix</h3><div class="amt">$299</div><div class="when">Delivered in 48 hours</div>
 <ul><li>Every issue tagged "quick fix" in your audit</li><li>Contrast, type sizes, line-height, mobile overflow, tap targets</li><li>Title, description, OG image and favicon</li><li>Delivered as a GitHub PR or a patch for your builder</li><li>Re-audit report to show what changed</li></ul>
-<a class="btn" href="#audit">Start with the free audit</a></div>
+<a class="btn" href="#audit">Start with the free audit</a>
+<a class="pay" href="https://paypal.me/doravidevelopment/299USD" target="_blank" rel="noopener">Pay with PayPal · $299</a>
+<p class="pay-note">Pay only after we've confirmed scope from your free audit and the fix is delivered.</p></div>
 <div class="tier"><h3>Polish sprint</h3><div class="amt">$900–1,500</div><div class="when">3 to 5 days, depending on page count</div>
 <ul><li>Everything in the quick fix</li><li>New type scale, spacing rhythm and palette, so the site stops looking like a template</li><li>Rewrite of the hero and section copy</li><li>Mobile layout pass on all key pages</li><li>Before/after report</li></ul>
-<a class="btn ghost" href="#audit">Ask about a sprint</a></div>
+<a class="btn ghost" href="#audit">Ask about a sprint</a>
+<a class="pay" href="https://paypal.me/doravidevelopment" target="_blank" rel="noopener">Pay invoice with PayPal</a>
+<p class="pay-note">Price is set by page count. Pay the invoice once we've confirmed scope and the sprint is delivered.</p></div>
 </div>
 <ol class="steps">
 <li><h3>Send your URL</h3><p>Use the form below. I only need the public link.</p></li>
