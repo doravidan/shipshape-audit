@@ -1,0 +1,67 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Style My Look (aitryon.studio): mini UI audit by Shipshape</title><style>
+@page { size: A4; margin: 14mm 13mm; }
+*{box-sizing:border-box} body{margin:0;font-family:"IBM Plex Sans",system-ui,sans-serif;color:#1C1917;font-size:13.5px;line-height:1.55;background:#fff}
+.wrap{max-width:900px;margin:0 auto;padding:32px 28px}
+h1,h2,h3{font-family:"Instrument Sans","IBM Plex Sans",sans-serif;line-height:1.2;margin:0}
+h1{font-size:30px;letter-spacing:-0.01em} h2{font-size:19px;margin:30px 0 10px;padding-top:14px;border-top:1px solid #E7E5E4} h3{font-size:15px}
+.mono{font-family:"JetBrains Mono",monospace;font-size:11.5px;color:#57534E;word-break:break-all}
+.brand{display:flex;justify-content:space-between;align-items:baseline;font-size:12px;color:#57534E;margin-bottom:22px}
+.brand b{color:#0F766E;font-size:15px;letter-spacing:.02em}
+.sub{color:#57534E;margin:6px 0 0}
+.top{display:grid;grid-template-columns:1.6fr 1fr;gap:22px;align-items:start;margin-top:18px}
+.shot{border:1px solid #D6D3D1;border-radius:6px;width:100%;display:block}
+.score{border:1px solid #D6D3D1;border-radius:8px;padding:16px}
+.score .big{font-size:44px;font-weight:700;font-family:"Instrument Sans",sans-serif;color:#0F766E;line-height:1}
+.gs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:12px}
+.g{text-align:center;border:1px solid #E7E5E4;border-radius:6px;padding:6px 2px}.gv{font-size:19px;font-weight:700}.gl{font-size:10px;color:#57534E}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0}
+.kpi{background:#F5F5F4;border-radius:6px;padding:10px}.kpi b{display:block;font-size:20px}.kpi span{font-size:11.5px;color:#57534E}
+.issue{border:1px solid #E7E5E4;border-left:4px solid #0F766E;border-radius:6px;padding:12px 14px;margin:10px 0;break-inside:avoid}
+.issue .h{display:flex;justify-content:space-between;gap:10px}.tag{font-size:11px;padding:1px 7px;border-radius:9px;background:#F5F5F4;color:#44403C;white-space:nowrap}
+.issue p{margin:6px 0}.fix{background:#F0FDFA;border-radius:4px;padding:6px 9px}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:14px;break-inside:avoid}.mini .ba{max-width:560px;margin:0 auto}
+.evi{max-height:1500px;object-fit:cover;object-position:top}.ba figure{margin:0}.ba figcaption{font-size:11.5px;color:#57534E;margin-top:4px}
+.mob{max-height:560px;object-fit:cover;object-position:top}
+.mini .top{grid-template-columns:1.3fr 1fr}.mini .issue{padding:9px 12px;margin:7px 0}.mini h2{margin-top:18px}
+table{border-collapse:collapse;width:100%;font-size:12px}td,th{border-bottom:1px solid #E7E5E4;padding:5px 6px;text-align:left;vertical-align:top}th{background:#F5F5F4}
+.offer{display:grid;grid-template-columns:1fr 1fr;gap:12px;break-inside:avoid}.card{border:1px solid #D6D3D1;border-radius:8px;padding:14px}.card .p{font-size:22px;font-weight:700;color:#0F766E}
+.note{font-size:11.5px;color:#57534E}
+.pb{break-before:page}
+@media screen and (max-width:640px){.wrap{padding:20px 16px}.top,.offer,.ba,.mini .top{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.issue .h{flex-direction:column}h1{font-size:24px}}
+</style></head><body class="mini"><div class="wrap">
+<div class="brand"><span><b>Shipshape</b> · Launch-polish for AI-built sites</span><span>Free mini-audit · 9 Oct 2026</span></div>
+<h1>Style My Look (aitryon.studio)</h1><p class="sub mono">https://aitryon.studio</p>
+<p class="sub">Builder detected: <b>not detected</b> · Stack: Vite SPA, shadcn/ui + lucide · Fonts in use: -apple-system, Playfair Display, Plus Jakarta Sans</p>
+<div class="top"><img class="shot" src="desktop_fold.jpg" alt="Desktop first screen">
+<div class="score"><div class="note">Polish score</div><div class="big">60<span style="font-size:18px;color:#57534E">/100</span></div>
+<div class="note" style="margin-top:6px">-12 accessibility violations<br>-9 design-quality issues<br>-15 AI-template tells<br>-4 mobile performance</div>
+<div class="gs"><div class="g"><div class="gv" style="color:#A16207">52</div><div class="gl">Perf</div></div><div class="g"><div class="gv" style="color:#15803D">96</div><div class="gl">A11y</div></div><div class="g"><div class="gv" style="color:#15803D">100</div><div class="gl">Best pr.</div></div><div class="g"><div class="gv" style="color:#15803D">100</div><div class="gl">SEO</div></div></div><div class="note" style="margin-top:4px">Lighthouse, mobile. LCP 5.1s · CLS 0.002</div></div></div>
+<div class="kpis"><div class="kpi"><b>2</b><span>accessibility rules failed (2 serious+)</span></div>
+<div class="kpi"><b>3</b><span>design-quality issue types</span></div>
+<div class="kpi"><b>8</b><span>"made by AI" template tells</span></div>
+<div class="kpi"><b>7</b><span>fixable in the $299 quick fix</span></div></div>
+<h2>Top 5 things I would fix first</h2>
+<div class="issue"><div class="h"><h3>1. Text with too little contrast</h3><span class="tag" style="color:#C2410C">Accessibility · serious</span></div>
+  <p>Elements must meet minimum color contrast ratio thresholds</p><div class="mono">.text-white\/45 (contrast 4.48:1, needs 4.5:1)</div>
+  <p class="fix"><b>Fix:</b> Raise text contrast to WCAG AA (4.5:1 body, 3:1 large text). <span class="tag">in $299 quick fix</span></p>
+  <div class="note">Source: axe-core · seen on desktop</div></div><div class="issue"><div class="h"><h3>2. Visible label differs from accessible name</h3><span class="tag" style="color:#C2410C">Accessibility · serious</span></div>
+  <p>Elements must have their visible text as part of their accessible name</p><div class="mono">a[href$=&quot;#top&quot;]</div>
+  <p class="fix"><b>Fix:</b> Elements must have their visible text as part of their accessible name <span class="tag">in $299 quick fix</span></p>
+  <div class="note">Source: axe-core · seen on desktop</div></div><div class="issue"><div class="h"><h3>3. Undersized functional text</h3><span class="tag" style="color:#A16207">Design quality · warning · ×4</span></div>
+  <p>Interactive and content-bearing UI text (links, buttons, nav items, labels, table cells, meta rows, timecodes) below 11px is a legibility failure, not a style choice.</p><div class="mono">9px functional text &quot;AI Try-On&quot; (below 11px floor)<br>9px functional text &quot;AI Try-On&quot; (below 10px floor)</div>
+  <p class="fix"><b>Fix:</b> Raise button/label text to at least 14px so controls are readable and tappable. <span class="tag">in $299 quick fix</span></p>
+  <div class="note">Source: Impeccable · seen on desktop + mobile</div></div><div class="issue"><div class="h"><h3>4. Slow on mobile (Performance 52/100)</h3><span class="tag" style="color:#C2410C">Performance · serious</span></div>
+  <p>Most launch traffic is mobile; LCP over 2.5s loses visitors.</p><div class="mono">LCP 5.1s, TBT 824ms, CLS 0.002<br>Reduce unused CSS (~0.5s)<br>Reduce unused JavaScript (~0.5s)</div>
+  <p class="fix"><b>Fix:</b> Compress/resize hero images (WebP/AVIF), lazy-load below the fold, split the JS bundle, preload the main font. <span class="tag">in $299 quick fix</span></p>
+  <div class="note">Source: Lighthouse · seen on mobile (simulated 4G)</div></div><div class="issue"><div class="h"><h3>5. AI color palette</h3><span class="tag" style="color:#A16207">AI-template tell · warning · ×2</span></div>
+  <p>Purple/violet gradients and cyan-on-dark are the most recognizable tells of AI-generated UIs.</p><div class="mono">Purple/violet gradient background</div>
+  <p class="fix"><b>Fix:</b> Replace the default purple/indigo-to-blue AI palette with brand colours. <span class="tag">polish sprint</span></p>
+  <div class="note">Source: Impeccable · seen on desktop + mobile</div></div>
+<h2>Before / after preview</h2><p class="note">The "after" images were made by applying CSS changes in a local browser only. Nothing on the live site was changed. Dashed boxes mark the changed elements: red is now, green is fixed. These are the mechanical fixes (contrast, line-height, line length). The paid fix also covers changes that need a person: layout, type and copy.</p><div class="ba"><figure><img class="shot mob" src="mobile_before.jpg"><figcaption>Now (iPhone width, 390px)</figcaption></figure><figure><img class="shot mob" src="mobile_after.jpg"><figcaption>After the mechanical fixes (contrast on 2 elements)</figcaption></figure></div>
+
+
+<h2>What fixing it looks like</h2>
+<div class="offer"><div class="card"><div class="p">$299</div><b>Quick fix, 48h</b><p>Everything tagged "quick fix" above, sent as one PR or patch to your repo (Lovable/Bolt/v0 export or GitHub). Re-audit report included.</p></div>
+<div class="card"><div class="p">$900–1,500</div><b>Polish sprint, 3–5 days</b><p>Quick fix plus type scale, spacing rhythm, palette and copy pass to remove the template look, plus mobile layout fixes. Before/after report included.</p></div></div>
+<h2>How this was checked</h2><p class="note">Automated, read-only checks on the public page on 9 Oct 2026: Impeccable 4.1.0 (59 deterministic rules, no LLM) at 1280px and 390px; axe-core 4.14.0 (WCAG 2.1 A/AA + best practice); Google Lighthouse 13.5 (mobile, simulated throttling); plus Shipshape checks for sideways scroll, tap targets, share/SEO metadata and console errors. Automated tools find a subset of issues. A clean result here does not mean the site is accessible or polished. Scores move between runs, Lighthouse performance especially. Prepared by Dor Avidan · [your email].</p>
+</div></body></html>
