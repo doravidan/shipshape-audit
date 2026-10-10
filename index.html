@@ -200,5 +200,16 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
   });
 })();
 </script>
+<script>
+(function(){
+  function gcEvent(path,title){ if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({path: path, title: title, event: true}); }
+  document.querySelectorAll('a[href="#audit"]').forEach(function(a){ a.addEventListener('click',function(){ gcEvent('ship-audit-cta','Shipshape free audit CTA: '+a.textContent.trim()); }); });
+  document.querySelectorAll('a[href^="https://paypal.me/"]').forEach(function(a){
+    var n=/\/299USD$/.test(a.getAttribute('href'))?'ship-paypal-299':'ship-paypal-invoice';
+    a.addEventListener('click',function(){ gcEvent(n,'Shipshape PayPal '+(n==='ship-paypal-299'?'$299':'invoice')); });
+  });
+})();
+</script>
+<script data-goatcounter="https://doravidan.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
