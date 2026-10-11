@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Style My Look (aitryon.studio): mini UI audit by Shipshape</title><style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Style My Look (aitryon.studio): mini UI audit by Shipshape</title><meta name="description" content="Free Shipshape mini UI audit of aitryon.studio (Style My Look): polish score 60/100, top 5 fixes, and a before/after preview."><link rel="canonical" href="https://doravidan.github.io/shipshape-audit/sample/mini.html"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><style>
 @page { size: A4; margin: 14mm 13mm; }
 *{box-sizing:border-box} body{margin:0;font-family:"IBM Plex Sans",system-ui,sans-serif;color:#1C1917;font-size:13.5px;line-height:1.55;background:#fff}
 .wrap{max-width:900px;margin:0 auto;padding:32px 28px}
@@ -9,7 +9,7 @@ h1{font-size:30px;letter-spacing:-0.01em} h2{font-size:19px;margin:30px 0 10px;p
 .brand b{color:#0F766E;font-size:15px;letter-spacing:.02em}
 .sub{color:#57534E;margin:6px 0 0}
 .top{display:grid;grid-template-columns:1.6fr 1fr;gap:22px;align-items:start;margin-top:18px}
-.shot{border:1px solid #D6D3D1;border-radius:6px;width:100%;display:block}
+.shot{height:auto;max-width:100%;border:1px solid #D6D3D1;border-radius:6px;width:100%;display:block}
 .score{border:1px solid #D6D3D1;border-radius:8px;padding:16px}
 .score .big{font-size:44px;font-weight:700;font-family:"Instrument Sans",sans-serif;color:#0F766E;line-height:1}
 .gs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:12px}
@@ -32,7 +32,7 @@ table{border-collapse:collapse;width:100%;font-size:12px}td,th{border-bottom:1px
 <div class="brand"><span><b>Shipshape</b> · Launch-polish for AI-built sites</span><span>Free mini-audit · 9 Oct 2026</span></div>
 <h1>Style My Look (aitryon.studio)</h1><p class="sub mono">https://aitryon.studio</p>
 <p class="sub">Builder detected: <b>not detected</b> · Stack: Vite SPA, shadcn/ui + lucide · Fonts in use: -apple-system, Playfair Display, Plus Jakarta Sans</p>
-<div class="top"><img class="shot" src="desktop_fold.jpg" alt="Desktop first screen">
+<div class="top"><img decoding="async" class="shot" src="desktop_fold.webp" width="1200" height="750" alt="Desktop first screen">
 <div class="score"><div class="note">Polish score</div><div class="big">60<span style="font-size:18px;color:#57534E">/100</span></div>
 <div class="note" style="margin-top:6px">-12 accessibility violations<br>-9 design-quality issues<br>-15 AI-template tells<br>-4 mobile performance</div>
 <div class="gs"><div class="g"><div class="gv" style="color:#A16207">52</div><div class="gl">Perf</div></div><div class="g"><div class="gv" style="color:#15803D">96</div><div class="gl">A11y</div></div><div class="g"><div class="gv" style="color:#15803D">100</div><div class="gl">Best pr.</div></div><div class="g"><div class="gv" style="color:#15803D">100</div><div class="gl">SEO</div></div></div><div class="note" style="margin-top:4px">Lighthouse, mobile. LCP 5.1s · CLS 0.002</div></div></div>
@@ -57,7 +57,7 @@ table{border-collapse:collapse;width:100%;font-size:12px}td,th{border-bottom:1px
   <p>Purple/violet gradients and cyan-on-dark are the most recognizable tells of AI-generated UIs.</p><div class="mono">Purple/violet gradient background</div>
   <p class="fix"><b>Fix:</b> Replace the default purple/indigo-to-blue AI palette with brand colours. <span class="tag">polish sprint</span></p>
   <div class="note">Source: Impeccable · seen on desktop + mobile</div></div>
-<h2>Before / after preview</h2><p class="note">The "after" images were made by applying CSS changes in a local browser only. Nothing on the live site was changed. Dashed boxes mark the changed elements: red is now, green is fixed. These are the mechanical fixes (contrast, line-height, line length). The paid fix also covers changes that need a person: layout, type and copy.</p><div class="ba"><figure><img class="shot mob" src="mobile_before.jpg"><figcaption>Now (iPhone width, 390px)</figcaption></figure><figure><img class="shot mob" src="mobile_after.jpg"><figcaption>After the mechanical fixes (contrast on 2 elements)</figcaption></figure></div>
+<h2>Before / after preview</h2><p class="note">The "after" images were made by applying CSS changes in a local browser only. Nothing on the live site was changed. Dashed boxes mark the changed elements: red is now, green is fixed. These are the mechanical fixes (contrast, line-height, line length). The paid fix also covers changes that need a person: layout, type and copy.</p><div class="ba"><figure><img decoding="async" loading="lazy" alt="Mobile view before the fixes" class="shot mob" src="mobile_before.webp" width="780" height="1688"><figcaption>Now (iPhone width, 390px)</figcaption></figure><figure><img decoding="async" loading="lazy" alt="Mobile view after the mechanical fixes (preview)" class="shot mob" src="mobile_after.webp" width="780" height="1688"><figcaption>After the mechanical fixes (contrast on 2 elements)</figcaption></figure></div>
 
 
 <h2>What fixing it looks like</h2>

@@ -5,17 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shipshape: free audit for AI-built websites, fixed in 48 hours</title>
 <meta name="description" content="Free audit of your Lovable, Bolt, v0 or Cursor-built site: accessibility, mobile, speed and template-look issues. $299 quick fix in 48 hours, or a $900–1,500 polish sprint.">
+<link rel="canonical" href="https://doravidan.github.io/shipshape-audit/">
+<meta name="theme-color" content="#0F766E">
+<meta property="og:site_name" content="Shipshape">
+<meta property="og:url" content="https://doravidan.github.io/shipshape-audit/">
 <meta property="og:title" content="Your AI-built site works. Now make it look like you meant it.">
 <meta property="og:description" content="Free audit for vibe-coded sites. $299 quick fix in 48 hours.">
 <meta property="og:image" content="https://doravidan.github.io/shipshape-audit/assets/og.png">
 <meta property="og:type" content="website">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Shipshape: free audit for AI-built websites">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Your AI-built site works. Now make it look like you meant it.">
+<meta name="twitter:description" content="Free audit for vibe-coded sites. $299 quick fix in 48 hours.">
+<meta name="twitter:image" content="https://doravidan.github.io/shipshape-audit/assets/og.png">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="assets/fonts/IBMPlexSans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/IBMPlexSans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/InstrumentSans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Shipshape: audit and fixes for AI-built websites", "serviceType": "Website UI, accessibility, mobile and speed audit and fixes", "url": "https://doravidan.github.io/shipshape-audit/", "image": "https://doravidan.github.io/shipshape-audit/assets/og.png", "description": "Free audit of your Lovable, Bolt, v0 or Cursor-built site: accessibility, mobile, speed and template-look issues. $299 quick fix in 48 hours, or a $900–1,500 polish sprint.", "provider": {"@type": "Person", "name": "Dor Avidan", "email": "avidandor@gmail.com"}, "areaServed": "Worldwide", "offers": [{"@type": "Offer", "name": "Free audit", "price": "0", "priceCurrency": "USD"}, {"@type": "Offer", "name": "Quick fix (48 hours)", "price": "299", "priceCurrency": "USD"}, {"@type": "Offer", "name": "Polish sprint (3 to 5 days)", "priceCurrency": "USD", "priceSpecification": {"@type": "PriceSpecification", "minPrice": "900", "maxPrice": "1500", "priceCurrency": "USD"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do you need access to my code for the free audit?", "acceptedAnswer": {"@type": "Answer", "text": "No. The audit only loads your public pages in a browser and doesn't log in, submit forms or change anything."}}, {"@type": "Question", "name": "How do you deliver the fixes?", "acceptedAnswer": {"@type": "Answer", "text": "If your project is synced to GitHub (Lovable, Bolt and v0 all support this), you get a pull request to review. Otherwise I send exact prompts and CSS for your builder and walk you through applying them."}}, {"@type": "Question", "name": "Is this just an automated report?", "acceptedAnswer": {"@type": "Answer", "text": "The checks are automated, but I review every report before it's sent, and a person does the fixes. Some findings are judgment calls, and those are labelled as such."}}, {"@type": "Question", "name": "Will the fix break my site?", "acceptedAnswer": {"@type": "Answer", "text": "Fixes come as a PR, so you can preview them before merging. The quick fix sticks to styling, metadata and markup, and doesn't change your app logic."}}, {"@type": "Question", "name": "Who is behind this?", "acceptedAnswer": {"@type": "Answer", "text": "I'm Dor Avidan. I ship an iOS app and its website, and I build with AI agents every day. Shipshape uses open-source tools (Impeccable, axe-core, Lighthouse) plus my own checks."}}]}</script>
 <style>
-@font-face{font-family:"Plex";src:url(assets/fonts/IBMPlexSans.woff2) format("woff2");font-weight:100 700;font-display:swap}
-@font-face{font-family:"Instrument";src:url(assets/fonts/InstrumentSans.woff2) format("woff2");font-weight:400 700;font-display:swap}
-@font-face{font-family:"JBMono";src:url(assets/fonts/JetBrainsMono.woff2) format("woff2");font-weight:100 800;font-display:swap}
+@font-face{font-family:"Plex";src:url(assets/fonts/IBMPlexSans-latin.woff2) format("woff2");font-weight:400 700;font-display:swap}
+@font-face{font-family:"Instrument";src:url(assets/fonts/InstrumentSans-latin.woff2) format("woff2");font-weight:400 700;font-display:swap}
 :root{--ink:#1C1917;--muted:#57534E;--line:#E7E5E4;--paper:#FAFAF9;--accent:#0F766E;--accent-ink:#134E4A;--warn:#B45309}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -66,12 +78,17 @@ section{padding:80px 0}
 .tier .pay-note{font-size:14px;color:var(--muted);margin:8px 0 0;text-align:center}
 .steps{counter-reset:s;list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:32px}
 .steps li{counter-increment:s;border-top:2px solid var(--ink);padding-top:14px}
-.steps li::before{content:counter(s);font-family:"JBMono",monospace;font-size:14px;color:var(--muted);display:block;margin-bottom:6px}
+.steps li::before{content:counter(s);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px;color:var(--muted);display:block;margin-bottom:6px}
 form{background:#fff;border:1px solid var(--line);border-radius:8px;padding:28px;display:grid;gap:18px;max-width:620px}
 label{font-weight:600;font-size:15px;display:block;margin-bottom:6px}
 input,select,textarea{width:100%;font:inherit;padding:12px 14px;border:1.5px solid #A8A29E;border-radius:6px;background:#fff;color:var(--ink)}
 input:focus,select:focus,textarea:focus,.btn:focus-visible,a:focus-visible{outline:3px solid #5EEAD4;outline-offset:2px}
 .form-note{font-size:14.5px;color:var(--muted)}
+.signup{display:block;background:transparent;border:0;padding:0;margin-top:22px;max-width:560px}
+.signup label{font-weight:500;color:var(--muted);font-size:15px}
+.su-row{display:flex;gap:8px;flex-wrap:wrap}.su-row input{flex:1 1 220px;width:auto;min-width:0;padding:10px 12px}.su-row .btn{padding:10px 18px;min-height:44px}
+.su-msg{margin:6px 0 0;font-size:14.5px;color:var(--accent-ink);font-weight:600}
+.hp{position:absolute!important;left:-9999px;width:1px;height:1px;overflow:hidden}
 .ok{display:none;background:#F0FDFA;border:1px solid #99F6E4;border-radius:6px;padding:14px 16px}
 .faq{max-width:760px}
 details{border-bottom:1px solid var(--line);padding:16px 0}
@@ -98,6 +115,14 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
 <p class="lede">Send me your Lovable, Bolt, v0 or Cursor-built site and I'll audit it for free. You get a short report covering contrast, mobile layout, speed, accessibility, and the default AI-template patterns that make a site look generated. If you want the fixes done, the quick fix is $299 and ships in 48 hours.</p>
 <div class="cta"><a class="btn" href="#audit">Get my free audit</a><a class="btn ghost" href="#sample">See a sample report</a></div>
 <small>No login or access needed for the audit. I only look at your public pages.</small>
+<form class="signup" id="signupForm" action="https://formsubmit.co/doravidan@mail.grokbot.com" method="POST">
+<label for="su-email">Launch-polish tips for AI-built sites, at most twice a month:</label>
+<div class="su-row"><input id="su-email" name="email" type="email" required autocomplete="email" placeholder="you@yourapp.com"><button class="btn ghost" type="submit">Sign up</button></div>
+<input type="hidden" name="_subject" value="New signup: Shipshape (shipshape-audit)"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://doravidan.github.io/shipshape-audit/?signup=ok">
+<input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+<p class="su-msg" id="signupMsg" role="status"></p>
+</form>
 </div></div>
 
 <section><div class="wrap">
@@ -127,7 +152,7 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
 <h2>A real sample report</h2>
 <p>This is the free mini-audit run on the website for my own app, <a href="https://aitryon.studio" rel="noopener">Style My Look</a>. That site was also built with an AI builder, so I'm holding it to the same standard. It scored 60/100.</p>
 <p>Each report ranks the issues by how much they hurt a first-time visitor, shows the elements involved, and includes a before/after preview of the fixes that can be applied mechanically.</p>
-<p><a class="btn ghost" href="sample/report.pdf">Full report (PDF)</a></p>
+<p><a class="btn ghost" href="sample/report.pdf">Full report (PDF)</a> <a href="sample/report.html">or read it as a web page</a></p>
 </div>
 <div class="frame"><iframe src="sample/mini.html" title="Sample mini-audit report" loading="lazy"></iframe></div>
 </div></section>
@@ -181,7 +206,7 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
 </div></div></section>
 </main>
 
-<footer><div class="wrap">Shipshape · Dor Avidan · <a href="mailto:avidandor@gmail.com">avidandor@gmail.com</a><br>Audits use Impeccable (Apache-2.0), axe-core (MPL-2.0) and Lighthouse (Apache-2.0). Fonts: IBM Plex Sans, Instrument Sans, JetBrains Mono (SIL OFL).</div></footer>
+<footer><div class="wrap">Shipshape · Dor Avidan · <a href="mailto:avidandor@gmail.com">avidandor@gmail.com</a><br>Audits use Impeccable (Apache-2.0), axe-core (MPL-2.0) and Lighthouse (Apache-2.0). Fonts: IBM Plex Sans, Instrument Sans (SIL OFL).</div></footer>
 
 <script>
 (function(){
@@ -203,6 +228,23 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
 <script>
 (function(){
   function gcEvent(path,title){ if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({path: path, title: title, event: true}); }
+  document.querySelectorAll('a[href="#sample"]').forEach(function(a){ a.addEventListener('click',function(){ gcEvent('ship-sample-cta','Shipshape see sample CTA'); }); });
+  document.querySelectorAll('a[href^="sample/report."]').forEach(function(a){ a.addEventListener('click',function(){ gcEvent('ship-report-'+(/pdf$/.test(a.getAttribute('href'))?'pdf':'html'),'Shipshape full report open'); }); });
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){ a.addEventListener('click',function(){ gcEvent('ship-mailto','Shipshape direct email link'); }); });
+  var af=document.getElementById('f'); af.addEventListener('submit',function(){ if(af.url.validity.valid!==false && /^\S+@\S+\.\S+$/.test(af.email.value.trim())) gcEvent('ship-audit-submit','Shipshape audit form submit'); });
+  // ---- Email signup (FormSubmit, no account; delivers to doravidan@mail.grokbot.com) ----
+  var sf=document.getElementById('signupForm'), sm=document.getElementById('signupMsg'), TO='doravidan@mail.grokbot.com';
+  if(new URLSearchParams(location.search).get('signup')==='ok') sm.textContent="Thanks, you're signed up.";
+  sf.addEventListener('submit',function(ev){
+    ev.preventDefault(); if(sf._honey.value) return;
+    var q=new URLSearchParams(location.search), d=new FormData(sf), btn=sf.querySelector('button');
+    d.append('site','Shipshape'); d.append('page',location.href); d.append('source',q.get('utm_source')||q.get('ref')||document.referrer||'direct');
+    gcEvent('ship-signup-submit','Shipshape email signup submit'); btn.disabled=true;
+    function fail(){ btn.disabled=false; sm.textContent="Signup didn't go through. You can email "; var a=document.createElement('a'); a.href='mailto:'+TO+'?subject='+encodeURIComponent('Shipshape signup')+'&body='+encodeURIComponent('Please add me: '+sf.email.value); a.textContent=TO; sm.appendChild(a); }
+    fetch('https://formsubmit.co/ajax/'+TO,{method:'POST',body:d,headers:{'Accept':'application/json'}}).then(function(r){return r.json();}).then(function(j){
+      if(String(j.success)==='true'){ sm.textContent="Thanks, you're signed up."; sf.reset(); btn.disabled=false; gcEvent('ship-signup-ok','Shipshape email signup confirmed'); } else fail();
+    }).catch(fail);
+  });
   document.querySelectorAll('a[href="#audit"]').forEach(function(a){ a.addEventListener('click',function(){ gcEvent('ship-audit-cta','Shipshape free audit CTA: '+a.textContent.trim()); }); });
   document.querySelectorAll('a[href^="https://paypal.me/"]').forEach(function(a){
     var n=/\/299USD$/.test(a.getAttribute('href'))?'ship-paypal-299':'ship-paypal-invoice';
