@@ -115,7 +115,7 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
 <p class="lede">Send me your Lovable, Bolt, v0 or Cursor-built site and I'll audit it for free. You get a short report covering contrast, mobile layout, speed, accessibility, and the default AI-template patterns that make a site look generated. If you want the fixes done, the quick fix is $299 and ships in 48 hours.</p>
 <div class="cta"><a class="btn" href="#audit">Get my free audit</a><a class="btn ghost" href="#sample">See a sample report</a></div>
 <small>No login or access needed for the audit. I only look at your public pages.</small>
-<form class="signup" id="signupForm" action="https://formsubmit.co/doravidan@mail.grokbot.com" method="POST">
+<form class="signup" id="signupForm" action="https://formsubmit.co/164487d071c2e91e2633ec878e59bce4" method="POST">
 <label for="su-email">Launch-polish tips for AI-built sites, at most twice a month:</label>
 <div class="su-row"><input id="su-email" name="email" type="email" required autocomplete="email" placeholder="you@yourapp.com"><button class="btn ghost" type="submit">Sign up</button></div>
 <input type="hidden" name="_subject" value="New signup: Shipshape (shipshape-audit)"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false">
@@ -241,7 +241,7 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
     d.append('site','Shipshape'); d.append('page',location.href); d.append('source',q.get('utm_source')||q.get('ref')||document.referrer||'direct');
     gcEvent('ship-signup-submit','Shipshape email signup submit'); btn.disabled=true;
     function fail(){ btn.disabled=false; sm.textContent="Signup didn't go through. You can email "; var a=document.createElement('a'); a.href='mailto:'+TO+'?subject='+encodeURIComponent('Shipshape signup')+'&body='+encodeURIComponent('Please add me: '+sf.email.value); a.textContent=TO; sm.appendChild(a); }
-    fetch('https://formsubmit.co/ajax/'+TO,{method:'POST',body:d,headers:{'Accept':'application/json'}}).then(function(r){return r.json();}).then(function(j){
+    fetch('https://formsubmit.co/ajax/164487d071c2e91e2633ec878e59bce4',{method:'POST',body:d,headers:{'Accept':'application/json'}}).then(function(r){return r.json();}).then(function(j){
       if(String(j.success)==='true'){ sm.textContent="Thanks, you're signed up."; sf.reset(); btn.disabled=false; gcEvent('ship-signup-ok','Shipshape email signup confirmed'); } else fail();
     }).catch(fail);
   });
